@@ -21,7 +21,7 @@ Yunoki.rb
 ```
 $ echo 亜 | ruby Yunoki.rb
 
-悪
+亞
 ```
 
 變換前の字は第 0 引數として渡しても同じ動作をします：
@@ -29,21 +29,21 @@ $ echo 亜 | ruby Yunoki.rb
 ```
 $ ruby Yunoki.rb 亜
 
-悪
+亞
 ```
 
 變換は toggle 方式です：
 
 ```
-$ echo 悪 | ruby Yunoki.rb
+$ echo 亜 | ruby Yunoki.rb
+
+亞
+```
+
+```
+$ echo 亜 | ruby Yunoki.rb | ruby Yunoki.rb
 
 亜
-```
-
-```
-$ echo 悪 | ruby Yunoki.rb | ruby Yunoki.rb
-
-悪
 ```
 
 異體字が複數あるときは， `table.dat` の順で變換します：
