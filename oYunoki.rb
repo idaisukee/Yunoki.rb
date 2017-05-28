@@ -21,7 +21,7 @@ class Yunoki
 		end.flatten
 	end
 
-	def output
+	def next_char
 		if self.target_array == nil or self.target_array.index(@input) == nil then
 			nil
 		else
@@ -33,7 +33,14 @@ class Yunoki
 			@target_array[@out_index]
 		end
 	end
+
+	def modern_char
+		if self.target_array == nil or self.target_array.index(@input) == nil then
+			nil
+		else
+			@target_array[0]
+		end
+	end
+		
 end
 
-	input = ARGV[0] || STDIN.gets.strip
-	print Yunoki.new(input).output || input
