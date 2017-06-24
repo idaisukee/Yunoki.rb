@@ -1,6 +1,4 @@
-# derived from http://wwwap.hi.u-tokyo.ac.jp/ships/itaiji_list.jsp
-# cat ut.dat | ruby -pe '$_.gsub!("\t", "").gsub!(/[0-9]/, "").gsub!("　", " ").gsub!(/^ /, "").gsub!(" \n", "\n")'
-
+# ut.dat + ieremii.dat
 亜 亞 
 唖 啞 瘂 
 悪 惡 
@@ -1084,3 +1082,4 @@
 惧 懼 
 芻 蒭 
 襪 韈 
+値 值
