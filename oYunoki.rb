@@ -26,11 +26,8 @@ class Yunoki
 			nil
 		else
 			@in_index = self.target_array.index(@input)
-			@out_index = 
-				if @in_index == self.target_array.size - 1 then 0
-				else @in_index + 1
-				end
-			@target_array[@out_index]
+			@rotation = - @target_array.size + @in_index + 1
+			@target_array.rotate(@rotation).first
 		end
 	end
 
