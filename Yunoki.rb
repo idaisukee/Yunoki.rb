@@ -1,28 +1,43 @@
 # -*- coding: utf-8 -*-
 
-begin
-	table = File.join(File.dirname(__FILE__), './table.dat')
+class Yunoki
+	def initialize(input)
+		@input = input
+		@table = File.join(File.dirname(__FILE__), './table.dat')
 
-	parent_array = Array.new
+		@parent_array = Array.new
 
-	File.open(table) do |file|
-		file.each do |line|
-			parent_array << line.split(' ')
+		File.open(@table) do |file|
+			file.each do |line|
+				@parent_array << line.split(' ')
+			end
+		end
+
+	end
+
+	def target_array
+		@target_array = @parent_array.select do |child_array|
+			child_array.include? @input
+		end.flatten
+	end
+
+	def next_char
+		if self.target_array == nil or self.target_array.index(@input) == nil then
+			nil
+		else
+			@in_index = self.target_array.index(@input)
+			@rotation = - @target_array.size + @in_index + 1
+			@target_array.rotate(@rotation).first
 		end
 	end
 
-	input = ARGV[0] || STDIN.gets.strip 
-	target_array = parent_array.select do |child_array|
-		child_array.include? input
-	end.flatten
-
-	in_index = target_array.index(input)
-	out_index = 
-		if in_index == target_array.size - 1 then 0
-		else in_index + 1
+	def modern_char
+		if self.target_array == nil or self.target_array.index(@input) == nil then
+			nil
+		else
+			@target_array[0]
 		end
-
-	print target_array[out_index]
-rescue
-	print input
+	end
+		
 end
+
