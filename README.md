@@ -76,10 +76,12 @@ $ echo 辧 | ruby Yunoki.rb
 
 を eval すると，變換したい文字の後ろに cursor を置いて `ieremii-replace-char` を實行すれば異體字に變換することができます．ただし，上の code 中の `Yunoki.rb` の path は適當に書き替へてください．この code は 
 
-- linuxBean 14.04 ( Ubuntu Linux 14.04 から派生 )
-- GNU Emacs 24.3.1
+- linuxBean 14.04 ( Ubuntu Linux 14.04 から派生 ) and 
+- ( GNU Emacs 24.3.1 or GNU Emacs 25.2.2 )
 
 で動作確認してゐます．
+
+https://github.com/idaisukee/Yunoki もご利用いただけます．
 
 # 名前の由來
 
