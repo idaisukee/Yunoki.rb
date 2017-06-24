@@ -38,6 +38,13 @@ class Yunoki
 			@target_array[0]
 		end
 	end
-		
+
+	def index
+		if self.target_array == nil or self.target_array.index(@input) == nil then
+			0
+		else
+			@in_index = self.target_array.index(@input)
+		end
+	end
 end
 
