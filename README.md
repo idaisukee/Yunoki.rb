@@ -16,10 +16,12 @@ Yunoki.rb
 
 # 使ひ方
 
+## next_char.rb
+
 變換前の字を標準入力に渡すと，變換後の字を標準出力に表示します：
 
 ```
-$ echo 亜 | ruby Yunoki.rb
+$ echo 亜 | ruby next_char.rb
 
 亞
 ```
@@ -27,7 +29,7 @@ $ echo 亜 | ruby Yunoki.rb
 變換前の字は第 0 引數として渡しても同じ動作をします：
 
 ```
-$ ruby Yunoki.rb 亜
+$ ruby next_char.rb 亜
 
 亞
 ```
@@ -35,13 +37,13 @@ $ ruby Yunoki.rb 亜
 變換は toggle 方式です：
 
 ```
-$ echo 亜 | ruby Yunoki.rb
+$ echo 亜 | ruby next_char.rb
 
 亞
 ```
 
 ```
-$ echo 亜 | ruby Yunoki.rb | ruby Yunoki.rb
+$ echo 亜 | ruby next_char.rb | ruby next_char.rb
 
 亜
 ```
@@ -49,16 +51,25 @@ $ echo 亜 | ruby Yunoki.rb | ruby Yunoki.rb
 異體字が複數あるときは， `table.dat` の順で變換します：
 
 ```
-$ echo 弁 | ruby Yunoki.rb
+$ echo 弁 | ruby next_char.rb
 
 辨
 
-$ echo 辨 | ruby Yunoki.rb
+$ echo 辨 | ruby next_char.rb
 
 辧
 
-$ echo 辧 | ruby Yunoki.rb
+$ echo 辧 | ruby next_char.rb
 瓣
+```
+
+## modern_char.rb
+
+現在の日本で通用してゐる字に變換します．
+
+```
+$ echo 辧 | ruby modern_char.rb
+弁
 ```
 
 # Emacs からの利用
