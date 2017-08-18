@@ -3,6 +3,10 @@ Yunoki.rb
 
 異體字變換 program
 
+# flavor text
+
+まるで柚木のやうに古いものと新しいものが並ぶ．
+
 # 概要
 
 異體字を變換する program です．異體字の data は http://wwwap.hi.u-tokyo.ac.jp/ships/itaiji_list.jsp にある「史料編纂所データベース異体字同定一覧」に基づいてゐます．
